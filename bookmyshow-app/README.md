@@ -1,4 +1,3 @@
-<img width="940" height="486" alt="image" src="https://github.com/user-attachments/assets/4fd97931-755e-4c54-94d2-62492cc9fc2f" /># Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # CloudOps: Enterprise DevOps CI/CD Platform on AWS EKS
