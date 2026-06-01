@@ -1,70 +1,335 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CloudOps: Enterprise DevOps CI/CD Platform on AWS EKS
 
-## Available Scripts
+<p align="center">
+  <img src="./screenshots/architecture-diagram.png" alt="Enterprise DevOps Architecture" width="1000"/>
+</p>
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+CloudOps is an enterprise-grade DevOps implementation designed to demonstrate a complete software delivery lifecycle using modern cloud-native technologies, automation practices, security validation, container orchestration, and infrastructure observability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project showcases how organizations can automate application delivery from source code commit to production deployment while maintaining security, scalability, reliability, and operational visibility.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Built on AWS and Kubernetes, the platform integrates CI/CD automation, DevSecOps practices, containerized deployments, monitoring, and cloud-native infrastructure management.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Business Objective
 
-### `npm run build`
+Traditional software deployment processes often involve manual intervention, inconsistent releases, delayed deployments, and limited visibility into application health.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project addresses these challenges by implementing:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Continuous Integration
+- Continuous Delivery
+- Automated Security Validation
+- Container-Based Deployment
+- Kubernetes Orchestration
+- Infrastructure Monitoring
+- Cloud-Native Scalability
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The result is a production-style deployment workflow capable of supporting enterprise application delivery requirements.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Enterprise Architecture
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Developer
+↓
+GitHub Repository
+↓
+Jenkins CI/CD Pipeline
+↓
+SonarQube Code Quality Analysis
+↓
+Trivy Security Scanning
+↓
+Docker Image Build
+↓
+DockerHub Registry
+↓
+Amazon EKS Cluster
+↓
+Kubernetes Deployment
+↓
+Application Delivery
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Monitoring Layer:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Prometheus
+↓
+Node Exporter
+↓
+Grafana Dashboards
 
-## Learn More
+Notification Layer:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Jenkins
+↓
+Email Notifications
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Core Capabilities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Continuous Integration
 
-### Analyzing the Bundle Size
+Automated build pipelines are triggered whenever source code changes are committed to GitHub.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Continuous Delivery
 
-### Making a Progressive Web App
+Application releases are automatically prepared and deployed through Kubernetes-based infrastructure.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### DevSecOps Integration
 
-### Advanced Configuration
+Security checks are integrated directly into the CI/CD workflow to identify vulnerabilities before deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Containerization
 
-### Deployment
+Applications are packaged into portable Docker containers ensuring consistency across environments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Kubernetes Orchestration
 
-### `npm run build` fails to minify
+Amazon EKS manages container scheduling, scaling, deployment, and workload availability.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Observability
+
+Real-time infrastructure and application metrics are collected and visualized using Prometheus and Grafana.
+
+---
+
+## Technology Stack
+
+### Cloud Platform
+
+- Amazon Web Services (AWS)
+- Amazon EKS
+- Amazon EC2
+- AWS IAM
+
+### DevOps Tools
+
+- Jenkins
+- Docker
+- Kubernetes
+- Git
+- GitHub
+
+### Security Tools
+
+- SonarQube
+- Trivy
+
+### Monitoring Tools
+
+- Prometheus
+- Grafana
+- Node Exporter
+
+### Application Runtime
+
+- Node.js
+- NPM
+
+---
+
+## CI/CD Pipeline Workflow
+
+### Stage 1: Source Control
+
+Application code is maintained and version controlled through GitHub repositories.
+
+### Stage 2: Automated Build
+
+Jenkins automatically detects repository updates and triggers pipeline execution.
+
+### Stage 3: Code Quality Verification
+
+SonarQube performs static code analysis to identify maintainability issues, bugs, and code quality violations.
+
+### Stage 4: Security Assessment
+
+Trivy scans the application and container layers to identify known vulnerabilities and security risks.
+
+### Stage 5: Container Build
+
+Docker packages the application into standardized container images.
+
+### Stage 6: Image Distribution
+
+Container images are pushed to DockerHub for centralized storage and version management.
+
+### Stage 7: Kubernetes Deployment
+
+The latest validated image is deployed to Amazon EKS for container orchestration and workload management.
+
+### Stage 8: Monitoring & Visibility
+
+Prometheus collects infrastructure metrics while Grafana provides real-time dashboards and visualization.
+
+### Stage 9: Notifications
+
+Pipeline status notifications are automatically delivered through email alerts.
+
+---
+
+## Security Implementation
+
+The platform incorporates security throughout the software delivery lifecycle.
+
+Security controls include:
+
+- Static Code Analysis
+- Vulnerability Scanning
+- Secure Credential Management
+- IAM-Based Access Control
+- Kubernetes Access Controls
+- Container Security Validation
+
+This ensures security is integrated into development workflows rather than treated as a post-deployment activity.
+
+---
+
+## Monitoring & Observability
+
+### Prometheus
+
+Prometheus continuously collects metrics from:
+
+- Jenkins
+- Kubernetes Nodes
+- Containers
+- Operating Systems
+- Infrastructure Components
+
+### Grafana
+
+Grafana dashboards provide insights into:
+
+- CPU Utilization
+- Memory Usage
+- Node Health
+- Cluster Performance
+- Application Availability
+- Infrastructure Metrics
+
+### Node Exporter
+
+Node Exporter exposes host-level metrics for system monitoring and operational analysis.
+
+---
+
+## AWS Services Utilized
+
+- Amazon EC2
+- Amazon EKS
+- AWS IAM
+- Security Groups
+- Elastic Networking
+- Load Balancing Components
+
+---
+
+## Enterprise Outcomes
+
+This implementation delivers:
+
+- Automated Application Delivery
+- Faster Release Cycles
+- Improved Deployment Reliability
+- Enhanced Security Validation
+- Infrastructure Visibility
+- Cloud-Native Scalability
+- Reduced Manual Operations
+- Production-Ready Deployment Workflow
+
+---
+
+## Project Highlights
+
+✔ Enterprise CI/CD Pipeline
+
+✔ DevSecOps Implementation
+
+✔ Kubernetes-Based Deployments
+
+✔ Cloud-Native Architecture
+
+✔ Security Automation
+
+✔ Infrastructure Monitoring
+
+✔ Containerized Workloads
+
+✔ AWS EKS Orchestration
+
+✔ Production-Oriented Deployment Strategy
+
+---
+
+## Screenshots
+
+### CI/CD Pipeline Execution
+
+![Jenkins](./screenshots/jenkins-pipeline.png)
+
+### Code Quality Dashboard
+
+![SonarQube](./screenshots/sonarqube-dashboard.png)
+
+### Security Scan Results
+
+![Trivy](./screenshots/trivy-scan.png)
+
+### Kubernetes Workloads
+
+![EKS](./screenshots/eks-deployment.png)
+
+### Infrastructure Monitoring
+
+![Grafana](./screenshots/grafana-dashboard.png)
+
+### Application Deployment
+
+![Application](./screenshots/application-homepage.png)
+
+---
+
+## Key Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Enterprise CI/CD Design
+- Cloud-Native Infrastructure
+- Kubernetes Administration
+- Amazon EKS Deployments
+- DevSecOps Practices
+- Container Security
+- Monitoring & Observability
+- Production Deployment Workflows
+- Infrastructure Troubleshooting
+- Automation Engineering
+
+---
+
+## Future Enhancements
+
+- ArgoCD GitOps Deployments
+- Terraform Infrastructure as Code
+- Helm-Based Release Management
+- Kubernetes Autoscaling
+- Centralized Logging (ELK Stack)
+- CloudWatch Integration
+- Advanced Alerting Systems
+- Multi-Environment Deployment Strategy
+
+---
+
+## Author
+
+Utkarsh Rathor
+
+DevOps Engineer | AWS | Kubernetes | Docker | Jenkins | Cloud-Native Infrastructure
