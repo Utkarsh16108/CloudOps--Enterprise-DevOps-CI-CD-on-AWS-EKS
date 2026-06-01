@@ -1,11 +1,10 @@
-# Getting Started with Create React App
+<img width="940" height="486" alt="image" src="https://github.com/user-attachments/assets/4fd97931-755e-4c54-94d2-62492cc9fc2f" /># Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # CloudOps: Enterprise DevOps CI/CD Platform on AWS EKS
 
-<p align="center">
-  <img src="./screenshots/architecture-diagram.png" alt="Enterprise DevOps Architecture" width="1000"/>
-</p>
+<img width="940" height="483" alt="image" src="https://github.com/user-attachments/assets/feb09d2d-99a7-4c5a-8e33-3dcb7bdd40b1" />
+
 
 ## Overview
 
@@ -70,6 +69,10 @@ Notification Layer:
 Jenkins
 ↓
 Email Notifications
+
+## visual representation:-
+<img width="1656" height="950" alt="image" src="https://github.com/user-attachments/assets/e4209b1e-7f53-4ca4-a4f3-920c26234c2b" />
+
 
 ---
 
@@ -274,27 +277,28 @@ This implementation delivers:
 
 ### CI/CD Pipeline Execution
 
-![Jenkins](./screenshots/jenkins-pipeline.png)
+<img width="940" height="441" alt="image" src="https://github.com/user-attachments/assets/60c5de31-35e6-4f9d-9c4f-fd933f8450f5" />
 
-### Code Quality Dashboard
 
-![SonarQube](./screenshots/sonarqube-dashboard.png)
+### Sonar Qube Dashboard
 
-### Security Scan Results
+<img width="940" height="486" alt="image" src="https://github.com/user-attachments/assets/287c04a8-5477-4287-909d-5c61723b60f9" />
 
-![Trivy](./screenshots/trivy-scan.png)
 
-### Kubernetes Workloads
+### Prometheus Dashboard
 
-![EKS](./screenshots/eks-deployment.png)
+<img width="941" height="422" alt="image" src="https://github.com/user-attachments/assets/7012fdad-dc60-4683-a383-9479ecefec89" />
 
-### Infrastructure Monitoring
 
-![Grafana](./screenshots/grafana-dashboard.png)
+### Infrastructure  Grafana Monitoring Dashboard.
 
-### Application Deployment
+<img width="940" height="468" alt="image" src="https://github.com/user-attachments/assets/851bdaa4-3f4c-4bbe-84a9-13ca0613ced1" />
 
-![Application](./screenshots/application-homepage.png)
+
+### Application Deployment On K8S and K8S port number.
+
+<img width="940" height="483" alt="image" src="https://github.com/user-attachments/assets/fbb521d5-53b2-4db8-9182-4bbceebeb353" />
+
 
 ---
 
